@@ -3,67 +3,67 @@ menu "screen configuration"
     menu "touch panel configuration"
         config TP_INT
             int "touch int pin"
-            default 10
             range 0 48
+            default 10
             # "触摸中断引脚，触摸屏中断引脚，当有触摸事件发生时，此引脚会触发中断信号。"
         
         config TP_RST
             int "touch reset pin"
-            default 11
             range 0 48
+            default 11
             # "触摸复位引脚，触摸屏控制器复位引脚，低电平有效。用于在初始化时复位触摸控制器，确保正常工作。"
         
         config TP_SDA
             int "touch IIC SDA pin"
-            default 12
             range 0 48
+            default 12
             # "触摸IIC数据引脚, 触摸屏I2C总线数据线，用于与触摸控制器通信。"
         
         config TP_SCL
             int "touch IIC SCL pin"
-            default 13
             range 0 48
+            default 13
             # "触摸IIC时钟引脚,触摸屏I2C总线时钟线，用于与触摸控制器通信。"
     endmenu
 
     menu "LCD configuration"
         config LCD_RST
             int "LCD reset pin"
-            default 14
             range 0 48
+            default 14
             # "LCD复位引脚,LCD显示屏复位引脚，低电平有效。"
             # "用于在初始化时复位LCD控制器，确保正常工作。"
         
         config LCD_SDA
             int "LCD SPI SDA(MOSI) pin"
-            default 15
             range 0 48
+            default 15
             # "LCD SPI数据引脚,用于将显示数据和命令从ESP32-S3传输到LCD模块。"
 
         config LCD_SCL
             int "LCD SPI SCL(SCK) pin"
-            default 16
             range 0 48
+            default 16
             # "LCD SPI时钟引脚,LCD的SPI时钟引脚，用于同步数据传输。"
         
         config LCD_CS
             int "LCD SPI CS pin"
-            default 17
             range 0 48
+            default 17
             # "LCD SPI片选引脚,LCD的SPI片选引脚，低电平有效。"
 
         config LCD_DC
             int "LCD SPI DC pin"
-            default 18
             range 0 48
+            default 18
             # "LCD SPI数据/命令选择引脚，LCD的数据/命令选择引脚。"
             # "高电平时，传输的数据被视为显示数据；"
             # "低电平时，传输的数据被视为控制命令。"
 
         config LCD_LEDK
             int "LCD backlight pin"
-            default 21
             range 0 48
+            default 21
             # "LCD背光引脚(PWM控制),通过调节PWM占空比可以控制屏幕亮度。"
     endmenu
 endmenu
@@ -74,8 +74,8 @@ menu "Other sensors"
     # 6轴惯性测量单元(3轴加速度计+3轴陀螺仪)
     config SENSOR_PWR
         int "Sensor power pin"
-        default 48
         range 0 48
+        default 48
         # "传感器供电引脚，为LSM6DSOXTR和LIS3MDLTR供电,"
         # "此引脚控制LSM6DSOXTR和LIS3MDLTR传感器的供电。"
         # "当不需要传感器时，可将此引脚置低以节省电量。"
@@ -83,21 +83,21 @@ menu "Other sensors"
     menu "IMU LSM6DSOXTR"
         config IMU_INT
             int "IMU interrupt pin"
-            default 47
             range 0 48
+            default 47
             # "当有加速度/陀螺仪数据就绪或触发阈值事件时，此引脚会产生中断信号."
         
         config IMU_SDA
             int "IMU IIC SDA pin"
-            default 41
             range 0 48
+            default 41
             # "LSM6DSOXTR的I2C数据线(SDA)。"
             # "与MAG_SDA共享同一I2C总线，但使用不同的I2C地址。"
 
         config IMU_SCL
             int "IMU IIC SCL pin"
-            default 42
             range 0 48
+            default 42
     endmenu
 
     # 磁力计传感器配置 - LIS3MDLTR
@@ -105,13 +105,13 @@ menu "Other sensors"
     menu "Geomagnetic sensor LIS3MDLTR"
         config MAG_SDA
             int "Magnetometer IIC SDA pin"
-            default 41
             range 0 48
+            default 41
 
         config MAG_SCL
             int "Magnetometer IIC SCL pin"
-            default 42
             range 0 48
+            default 42
     endmenu 
 
     # INMP441数字麦克风模块
@@ -120,23 +120,23 @@ menu "Other sensors"
         # "INMP441数字麦克风模块引脚配置,使用I2S接口"
         config MIC_SCK
             int "Microphone SCK pin"
-            default 40
             range 0 48
+            default 40
 
         config MIC_SD
             int "Microphone SD pin"
-            default 39
             range 0 48
+            default 39
 
         config MIC_WS
             int "Microphone WS pin"
-            default 38
             range 0 48
+            default 38
 
         config MIC_PWR
             int "INMP441 power pin"
-            default 44
             range 0 48
+            default 44
             # "INMP441麦克风模块电源控制引脚。"
             # "高电平有效，用于控制麦克风模块的电源供应。"
             # "当不需要录音时，可将此引脚置低以节省电量。"
@@ -146,60 +146,75 @@ endmenu
 menu "Buttons"
     config BUTTON_0
         int "Button 0 pin"
-        default 3
         range 0 48
+        default 3
         #"按键0引脚"
     
     config BUTTON_1
         int "Button 1 pin"
-        default 1
         range 0 48
+        default 1
         #"按键1引脚"
 
     config BUTTON_2
         int "Button 2 pin"
-        default 2
         range 0 48
+        default 2
         #"按键2引脚"
 
     config BUTTON_3
         int "Button 3 pin"
-        default 4
         range 0 48
+        default 4
         #"按键3引脚"
 endmenu
 
-menu "PN532_C1"
-    config HSU_RXD
-        int "PN532 HSU RXD pin"
-        default 8
+menu "Vibration Motor"
+    config VIBRATION_MOTOR_PIN
+        int "VIBRATION_MOTOR"
         range 0 48
-        #"PN532 HSU模式RXD引脚,注意是PN532的接收引脚"
+        default 43
+        #振动马达引脚，高电平有效
+endmenu
 
-    config HSU_TXD
-        int "PN532 HSU TXD pin"
-        default 7
+menu "PN532_C1"
+    #配置下的PN532使用IIC通信，I0拉高，I1拉低
+    config PN_SCL
+        int "PN532 SCL pin"
         range 0 48
-        #"PN532 HSU模式TXD引脚,注意是PN532的发送引脚"
+        default 42
+        #PN532 的IIC SCL 的引脚
+
+    config PN_SDA
+        int "PN532 SDA pin"
+        range 0 48
+        default 41
+        #PN532 的IIC SDA 的引脚
+
+    config PN_INT
+        int "PN532 INT input"
+        range 0 48
+        default 7
+        #PN532 的中断输入引脚
 
     config RSTSPD_N
         int "PN532 reset pin"
-        default 6
         range 0 48
+        default 6
         #"PN532复位引脚,高电平开启，低电平关闭"
 endmenu
 
 menu "Battery ADC configuration"
     config BATTERY_ADC_PIN
         int "Battery ADC pin"
-        default 5
         range 0 48
+        default 5
         # "电池电压检测ADC引脚,注意量程"
 
     config BATTERY_ADC_ATTEN
         int "Battery ADC attenuation"
-        default 2
         range 0 3
+        default 2
         # "ADC衰减比例，0-3"
         # "• 当ATTEN=0，有效测量范围为0~850mV时，总误差为±5mV。"
         # "• 当ATTEN=1，有效测量范围为0~1100mV时，总误差为±6mV。"

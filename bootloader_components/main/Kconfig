@@ -1,0 +1,22 @@
+menu "Bootloader configuration"
+    config BOOTLOADER_RECOVERY_BUTTON_ENABLE
+        bool " enable recovery button"
+        default y
+        
+    config BOOTLOADER_RECOVERY_BUTTON_GPIO
+        int "Recovery button GPIO pin"
+        range 0 48
+        default 1
+        depends on BOOTLOADER_RECOVERY_BUTTON_ENABLE
+        
+    config BOOTLOADER_RECOVERY_BUTTON_ACTIVE_LEVEL
+        bool "Recovery button low level active"
+        default y
+        depends on BOOTLOADER_RECOVERY_BUTTON_ENABLE
+        
+    config BOOTLOADER_AUTO_FALLBACK
+        bool "enable auto fallback"
+        default y
+        depends on BOOTLOADER_RECOVERY_BUTTON_ENABLE
+        #当factory启动失败时自动回退到recovery分区，反之亦然
+endmenu
