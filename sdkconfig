@@ -5234,6 +5234,19 @@ CONFIG_LV_BUILD_DEMOS=y
 # CONFIG_LV_USE_DEMO_HIGH_RES is not set
 # end of Demos
 # end of LVGL configuration
+
+#
+# Bootloader configuration
+#
+# default:
+CONFIG_BOOTLOADER_RECOVERY_BUTTON_ENABLE=y
+# default:
+CONFIG_BOOTLOADER_RECOVERY_BUTTON_GPIO=1
+# default:
+CONFIG_BOOTLOADER_RECOVERY_BUTTON_ACTIVE_LEVEL=y
+# default:
+CONFIG_BOOTLOADER_AUTO_FALLBACK=y
+# end of Bootloader configuration
 # end of Component config
 
 # default:

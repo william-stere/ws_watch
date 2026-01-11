@@ -33,16 +33,11 @@ void __attribute__((noreturn)) call_start_cpu0(void)
         bootloader_reset();
     }
 
-    bool force_full_boot = false;
-    #if CONFIG_BOOTLOADER_RECOVERY_BUTTON_ENABLE
-    force_full_boot = check_rtc_force_full_boot_flag();
-    #endif
-
     // (1.1 Call the after-init hook, if available)
     if (bootloader_after_init) {
         bootloader_after_init();
     }
-if (!force_full_boot) {
+
 #ifdef CONFIG_BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP
     // If this boot is a wake up from the deep sleep then go to the short way,
     // try to load the application which worked before deep sleep.
@@ -50,7 +45,6 @@ if (!force_full_boot) {
     bootloader_utility_load_boot_image_from_deep_sleep();
     // If it is not successful try to load an application as usual.
 #endif
-}
 
     // 2. Select the number of boot partition
     bootloader_state_t bs = {0};
@@ -69,7 +63,7 @@ if (!force_full_boot) {
 }
 
 // Select the number of boot partition
-static int select_partition_number(bootloader_state_t *bs, bool force_full_boot)
+static int select_partition_number(bootloader_state_t *bs)
 {
     // 1. Load partition table
     if (!bootloader_utility_load_partition_table(bs)) {
@@ -78,21 +72,20 @@ static int select_partition_number(bootloader_state_t *bs, bool force_full_boot)
     }
 
     // 2. Select the number of boot partition
-    return selected_boot_partition(bs, force_full_boot);
+    return selected_boot_partition(bs);
 }
 
 /*
  * Selects a boot partition.
  * The conditions for switching to another firmware are checked.
  */
-static int selected_boot_partition(const bootloader_state_t *bs, bool force_full_boot)
+static int selected_boot_partition(const bootloader_state_t *bs)
 {
     int boot_index = bootloader_utility_get_selected_boot_partition(bs);
     if (boot_index == INVALID_INDEX) {
         return boot_index; // Unrecoverable failure (not due to corrupt ota data or bad partition contents)
     }
-    //TODO RESET_REASON_CORE_DEEP_SLEEP的定义问题
-    if (esp_rom_get_reset_reason(0) != RESET_REASON_CORE_DEEP_SLEEP || force_full_boot) {
+    if (esp_rom_get_reset_reason(0) != RESET_REASON_CORE_DEEP_SLEEP) {
         // Factory firmware.
 #ifdef CONFIG_BOOTLOADER_FACTORY_RESET
         bool reset_level = false;
@@ -117,19 +110,6 @@ static int selected_boot_partition(const bootloader_state_t *bs, bool force_full
         }
 #endif // CONFIG_BOOTLOADER_FACTORY_RESET
         // TEST firmware.
-
-#if CONFIG_BOOTLOADER_RECOVERY_BUTTON_ENABLE
-        if (is_recovery_button_pressed()){
-            ESP_LOGI(TAG,"Recovery button pressed");
-            if (bs->recovery.offset != 0) {
-                clear_rtc_boot_flags();
-                return RECOVERY_INDEX;
-        }else {
-                ESP_LOGE(TAG, "Recovery partition is not found");
-        }
-    }
-#endif
-
 #ifdef CONFIG_BOOTLOADER_APP_TEST
         bool app_test_level = false;
 #if CONFIG_BOOTLOADER_APP_TEST_PIN_HIGH
@@ -160,12 +140,4 @@ struct _reent *__getreent(void)
 {
     return _GLOBAL_REENT;
 }
-#endif
-
-#if CONFIG_BOOTLOADER_RECOVERY_BUTTON_ENABLE
-
-static bool check_rtc_force_full_boot_flag(void);
-static void clear_rtc_boot_flags(void);
-static bool is_recovery_button_pressed(void);
-
 #endif
