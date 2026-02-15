@@ -21,7 +21,7 @@
 #define LCD_HOST             SPI2_HOST
 #define LCD_H_RES            (240)
 #define LCD_V_RES            (300)
-#define LCD_BIT_PER_PIXEL    (16)
+#define LCD_BIT_PER_PIXEL    (18)
 
 #define PIN_NUM_LCD_CS       (GPIO_NUM_10)
 #define PIN_NUM_LCD_SCLK     (GPIO_NUM_13)
@@ -158,17 +158,6 @@ void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(100));
     ESP_ERROR_CHECK(iic_init());
 
-    for(uint8_t addr = 1; addr < 127; addr++) {
-        esp_err_t ret = i2c_master_probe(i2c_bus_handle, addr, pdMS_TO_TICKS(10));
-        if(addr % 10 == 0)
-        {
-            ESP_LOGI(TAG, "Probing I2C address: 0x%02X", addr);
-        }
-        if (ret == ESP_OK) {
-            ESP_LOGI(TAG, "Found I2C device at address 0x%02X", addr);
-        }
-    }
-
     esp_lcd_touch_handle_t tp_handle = NULL;
     const esp_lcd_touch_config_t tp_cfg = {
         .x_max = LCD_H_RES,
@@ -185,19 +174,7 @@ void app_main(void)
         },
         .interrupt_callback = NULL,
     };
-    ESP_ERROR_CHECK(esp_lcd_touch_new_i2c_cst816(tp_io_handle, &tp_cfg, &tp_handle));
-
-    while (1)
-    {
-        uint8_t finger = 0;
-        esp_err_t ret = test(tp_handle, &finger);
-        if (ret == ESP_OK) {
-            ESP_LOGI(TAG, "test: %d", finger);
-        } else {
-            ESP_LOGI(TAG, "failed");
-        }
-        vTaskDelay(pdMS_TO_TICKS(1000));
-    }
+    ESP_ERROR_CHECK(esp_lcd_touch_new_i2c_cst816d(tp_io_handle, &tp_cfg, &tp_handle,NULL));
 
     uint16_t green = 0x07E0;
     uint16_t white = 0xFFFF; 
@@ -205,19 +182,14 @@ void app_main(void)
 
     while(1)
     {
-        esp_err_t ret = cst816d_get_xy(tp_handle);
-        if (ret != ESP_OK) {
-            ESP_LOGI(TAG, "wait touch");
-            vTaskDelay(pdMS_TO_TICKS(10));
-            continue;
-        }
+        esp_err_t ret = esp_lcd_touch_read_data(tp_handle);
 
         uint16_t x, y;
-        uint8_t touch_cnt = 0;
+        uint8_t touch_point = 0;
         esp_lcd_touch_point_data_t touch_points[1];
-        esp_lcd_touch_get_data(tp_handle, touch_points, &touch_cnt, 1);   
+        esp_lcd_touch_get_data(tp_handle, touch_points, &touch_point, 1);
 
-        if(touch_cnt > 0)
+        if(touch_point > 0)
         {
             x = touch_points[0].x;
             y = touch_points[0].y;
