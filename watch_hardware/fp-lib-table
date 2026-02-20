@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "esp32-s3-pico-1")(type "KiCad")(uri "${KIPRJMOD}/footprints/esp32-s3-pico-1.pretty")(options "")(descr ""))
+  (lib (name "projects")(type "KiCad")(uri "${KIPRJMOD}/footprints/projects.pretty")(options "")(descr ""))
+)

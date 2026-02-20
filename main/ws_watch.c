@@ -14,24 +14,25 @@
 
 #include "lvgl.h"
 #include "esp_lvgl_port.h"
+#include "lv_demos.h"
 
 #include "esp_lcd_nv3030b.h"
 #include "cst816d.h"
 
 #define LCD_HOST             SPI2_HOST
 #define LCD_H_RES            (240)
-#define LCD_V_RES            (300)
-#define LCD_BIT_PER_PIXEL    (18)
+#define LCD_V_RES            (284)
+#define LCD_BIT_PER_PIXEL    (16)
 
 #define PIN_NUM_LCD_CS       (GPIO_NUM_10)
-#define PIN_NUM_LCD_SCLK     (GPIO_NUM_13)
+#define PIN_NUM_LCD_PCLK     (GPIO_NUM_13)
 #define PIN_NUM_LCD_MOSI     (GPIO_NUM_11)
 #define PIN_NUM_LCD_DATA1    (GPIO_NUM_12)
 #define PIN_NUM_LCD_DATA2    (GPIO_NUM_15)
 #define PIN_NUM_LCD_DATA3    (GPIO_NUM_14)
 #define PIN_NUM_LCD_RST      (GPIO_NUM_NC)
 #define PIN_NUM_LCD_BL       (GPIO_NUM_NC)
-#define LCD_SCLK_FREQ_HZ     (40 * 1000 * 1000)
+#define LCD_PCLK_FREQ_HZ     (10 * 1000 * 1000)
 
 #define TOUCH_INT            (GPIO_NUM_NC)
 
@@ -43,8 +44,20 @@ static esp_lcd_panel_handle_t lcd_panel = NULL;
 
 static i2c_master_bus_handle_t i2c_bus_handle = NULL;
 static esp_lcd_panel_io_handle_t tp_io_handle = NULL;
+esp_lcd_touch_handle_t tp_handle = NULL;
 
 static const char *TAG = "main";
+static SemaphoreHandle_t refresh_finish = NULL;
+
+IRAM_ATTR static bool test_notify_refresh_ready(esp_lcd_panel_io_handle_t panel_io, esp_lcd_panel_io_event_data_t *edata, void *user_ctx)
+{
+    BaseType_t need_yield = pdFALSE;
+
+    xSemaphoreGiveFromISR(refresh_finish, &need_yield);
+    return (need_yield == pdTRUE);
+}
+
+
 
 esp_err_t lcd_init(void)
 {
@@ -52,32 +65,25 @@ esp_err_t lcd_init(void)
     ESP_LOGI(TAG, "Initialize LCD");
 
     const spi_bus_config_t buscfg = NV3030B_PANEL_BUS_QSPI_CONFIG(
-                                                                PIN_NUM_LCD_SCLK,
+                                                                PIN_NUM_LCD_PCLK,
                                                                 PIN_NUM_LCD_MOSI,
                                                                 PIN_NUM_LCD_DATA1,
                                                                 PIN_NUM_LCD_DATA2,
                                                                 PIN_NUM_LCD_DATA3,
-                                                                LCD_SCLK_FREQ_HZ );
+                                                                LCD_H_RES * LCD_V_RES * LCD_BIT_PER_PIXEL);
     ESP_RETURN_ON_ERROR(spi_bus_initialize(LCD_HOST, &buscfg, SPI_DMA_CH_AUTO), TAG, "initialize LCD bus failed");
 
     const esp_lcd_panel_io_spi_config_t io_cfg = NV3030B_PANEL_IO_QSPI_CONFIG(
                                                                 PIN_NUM_LCD_CS,
-                                                                NULL,
+                                                                test_notify_refresh_ready,
                                                                 NULL);
 
     ESP_RETURN_ON_ERROR(esp_lcd_new_panel_io_spi(LCD_HOST, &io_cfg, &lcd_io), TAG, "initialize LCD panel IO failed");
-
-    const nv3030b_vendor_config_t vendor_cfg = {
-        .flags = {
-            .use_qspi_interface = 1,
-        },
-    };
 
     const esp_lcd_panel_dev_config_t panel_config = {
         .reset_gpio_num = PIN_NUM_LCD_RST,
         .rgb_ele_order = LCD_RGB_ELEMENT_ORDER_RGB,
         .bits_per_pixel = LCD_BIT_PER_PIXEL,
-        .vendor_config = (void *) &vendor_cfg,
     };
 
     ESP_RETURN_ON_ERROR(esp_lcd_new_panel_nv3030b(lcd_io, &panel_config, &lcd_panel), TAG, "initialize LCD panel failed");
@@ -103,7 +109,7 @@ lv_display_t *lvgl_init(void)
     const lvgl_port_display_cfg_t disp_cfg = {
         .io_handle = lcd_io,
         .panel_handle = lcd_panel,
-        .buffer_size = LCD_H_RES * 10,  // 80 行缓冲区
+        .buffer_size = 284 * 20,
         .double_buffer = true,
         .hres = LCD_H_RES,
         .vres = LCD_V_RES,
@@ -126,6 +132,7 @@ lv_display_t *lvgl_init(void)
 
 esp_err_t iic_init()
 {
+
     i2c_master_bus_config_t bus_config = {
         .i2c_port = 0,
         .scl_io_num = I2C0_SCL_PIN,
@@ -149,16 +156,6 @@ esp_err_t iic_init()
     };
     ESP_RETURN_ON_ERROR(esp_lcd_new_panel_io_i2c(i2c_bus_handle, &iic_io_config, &tp_io_handle), TAG, "initialize touch panel IO failed");
 
-    return ESP_OK;
-}
-
-void app_main(void)
-{
-    ESP_ERROR_CHECK(lcd_init());
-    vTaskDelay(pdMS_TO_TICKS(100));
-    ESP_ERROR_CHECK(iic_init());
-
-    esp_lcd_touch_handle_t tp_handle = NULL;
     const esp_lcd_touch_config_t tp_cfg = {
         .x_max = LCD_H_RES,
         .y_max = LCD_V_RES,
@@ -174,27 +171,55 @@ void app_main(void)
         },
         .interrupt_callback = NULL,
     };
-    ESP_ERROR_CHECK(esp_lcd_touch_new_i2c_cst816d(tp_io_handle, &tp_cfg, &tp_handle,NULL));
+    esp_lcd_touch_new_i2c_cst816d(tp_io_handle, &tp_cfg, &tp_handle, NULL);
 
-    uint16_t green = 0x07E0;
-    uint16_t white = 0xFFFF; 
-    esp_lcd_panel_draw_bitmap(lcd_panel, 0, 0, LCD_H_RES, LCD_V_RES, &white);
+    return ESP_OK;
+}
 
-    while(1)
-    {
-        esp_err_t ret = esp_lcd_touch_read_data(tp_handle);
+static void test_draw_bitmap(esp_lcd_panel_handle_t panel_handle)
+{
+    refresh_finish = xSemaphoreCreateBinary();
+    //TEST_ASSERT_NOT_NULL(refresh_finish);
 
-        uint16_t x, y;
-        uint8_t touch_point = 0;
-        esp_lcd_touch_point_data_t touch_points[1];
-        esp_lcd_touch_get_data(tp_handle, touch_points, &touch_point, 1);
+    uint16_t row_line = LCD_V_RES / LCD_BIT_PER_PIXEL;
+    uint8_t byte_per_pixel = LCD_BIT_PER_PIXEL / 8;
+    uint8_t *color = (uint8_t *)heap_caps_calloc(1, row_line * LCD_H_RES * byte_per_pixel, MALLOC_CAP_DMA);
+    //TEST_ASSERT_NOT_NULL(color);
 
-        if(touch_point > 0)
-        {
-            x = touch_points[0].x;
-            y = touch_points[0].y;
-            ESP_LOGI(TAG, "Touch: X=%d, Y=%d", x, y);
-            esp_lcd_panel_draw_bitmap(lcd_panel, x, y, x + 1, y + 1, &green);
+    for (int j = 0; j < LCD_BIT_PER_PIXEL; j++) {
+        for (int i = 0; i < row_line * LCD_H_RES; i++) {
+            for (int k = 0; k < byte_per_pixel; k++) {
+                color[i * byte_per_pixel + k] = (SPI_SWAP_DATA_TX(BIT(j), LCD_BIT_PER_PIXEL) >> (k * 8)) & 0xff;
+            }
         }
+        esp_lcd_panel_draw_bitmap(panel_handle, 0, j * row_line, LCD_H_RES, (j + 1) * row_line, color);
+        xSemaphoreTake(refresh_finish, portMAX_DELAY);
     }
+    free(color);
+    vSemaphoreDelete(refresh_finish);
+    //vTaskDelay(pdMS_TO_TICKS(3000));
+}
+
+
+void app_main(void)
+{   
+    /*
+    ESP_ERROR_CHECK(lcd_init());
+    uint16_t white = 0xFFFF;
+    
+    while (1)
+    {
+            test_draw_bitmap(lcd_panel);
+            vTaskDelay(pdMS_TO_TICKS(1000));
+
+    }
+    */
+    
+    ESP_ERROR_CHECK(lcd_init());
+    vTaskDelay(pdMS_TO_TICKS(100));
+    ESP_ERROR_CHECK(iic_init());
+
+    lvgl_init();
+    lv_demo_benchmark();
+    
 }

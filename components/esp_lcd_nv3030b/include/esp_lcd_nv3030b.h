@@ -38,9 +38,6 @@ typedef struct {
                                                  *   参考源码中的 `vendor_specific_init_default`
                                                  */
     uint16_t init_cmds_size;    /*<! 上述数组中的命令数量 */
-    struct {
-        unsigned int use_qspi_interface: 1;     /*<! 使用 QSPI 接口时设为 1，默认使用 SPI 接口 */
-    } flags;
 } nv3030b_vendor_config_t;
 
 /**
@@ -59,15 +56,6 @@ esp_err_t esp_lcd_new_panel_nv3030b(const esp_lcd_panel_io_handle_t io, const es
  * @brief LCD 面板总线配置结构
  *
  */
-#define NV3030B_PANEL_BUS_SPI_CONFIG(sclk, mosi, max_trans_sz)  \
-    {                                                           \
-        .sclk_io_num = sclk,                                    \
-        .mosi_io_num = mosi,                                    \
-        .miso_io_num = -1,                                      \
-        .quadhd_io_num = -1,                                    \
-        .quadwp_io_num = -1,                                    \
-        .max_transfer_sz = max_trans_sz,                        \
-    }
 #define NV3030B_PANEL_BUS_QSPI_CONFIG(sclk, d0, d1, d2, d3, max_trans_sz) \
     {                                                           \
         .sclk_io_num = sclk,                                    \
@@ -82,18 +70,6 @@ esp_err_t esp_lcd_new_panel_nv3030b(const esp_lcd_panel_io_handle_t io, const es
  * @brief LCD 面板 IO 配置结构
  *
  */
-#define NV3030B_PANEL_IO_SPI_CONFIG(cs, dc, cb, cb_ctx)         \
-    {                                                           \
-        .cs_gpio_num = cs,                                      \
-        .dc_gpio_num = dc,                                      \
-        .spi_mode = 3,                                          \
-        .pclk_hz = 60 * 1000 * 1000,                            \
-        .trans_queue_depth = 10,                                \
-        .on_color_trans_done = cb,                              \
-        .user_ctx = cb_ctx,                                     \
-        .lcd_cmd_bits = 8,                                      \
-        .lcd_param_bits = 8,                                    \
-    }
 #define NV3030B_PANEL_IO_QSPI_CONFIG(cs, cb, cb_ctx)            \
     {                                                           \
         .cs_gpio_num = cs,                                      \
@@ -105,9 +81,6 @@ esp_err_t esp_lcd_new_panel_nv3030b(const esp_lcd_panel_io_handle_t io, const es
         .user_ctx = cb_ctx,                                     \
         .lcd_cmd_bits = 32,                                     \
         .lcd_param_bits = 8,                                    \
-        .flags = {                                              \
-            .quad_mode = true,                                  \
-        },                                                      \
     }
 
 #ifdef __cplusplus

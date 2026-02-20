@@ -1,0 +1,218 @@
+(footprint "TS24CA_250gf_013"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "特性：塑料件表面光洁,无划伤、水花、变形等影响外观及性能的缺陷。开关手感明显,档位清晰可靠,无卡滞现象,消除外力后,能快速回位。额定电流:50mA、12VDC。绝缘电阻:100MΩ min,100V DC。介电强度:250V AC for 1min。接触电阻:100mΩ max。操作温度:-25°C~ +70°C。使用寿命:约30000次。单通单极回路。按键行程:0.15±0.05mm。按键的开关驱动力:250±50gf")
+	(property "Reference" "SW?"
+		(at -1.4 2.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "5e3a544e-431c-4dbc-b789-c91cd85dba34")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "TS24CA_250gf_013"
+		(at -0.6 3.9 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "6dba35e9-7b78-4655-9f0e-e94704c9aa6f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://item.szlcsc.com/datasheet/TS24CA%2520250gf%2520013/6227347.html"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0cb2431f-c692-4746-9a90-c0995819e29f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "80de13aa-5e74-4dcb-b6e5-9818659c061a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -2.6 -0.2)
+		(end -2.6 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6d4bea35-3513-4e53-8ad4-898c642ae7fa")
+	)
+	(fp_line
+		(start -2.6 1)
+		(end -2.1 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0a9dc3f7-f425-4217-8328-2b3c922ccaa9")
+	)
+	(fp_line
+		(start -1.3 1)
+		(end 1.3 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7c5e943c-98e6-4b18-9a87-fc16e81883a4")
+	)
+	(fp_line
+		(start -1 -2.1)
+		(end 1 -2.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a9870eff-175a-4236-93b5-9860a11c468f")
+	)
+	(fp_line
+		(start -1 -1.4)
+		(end -1 -2.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b7a17ddf-c651-40f6-b617-59fae7d51a10")
+	)
+	(fp_line
+		(start 1 -2.1)
+		(end 1 -1.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9ae794f1-6d0b-4217-bac6-568affd87938")
+	)
+	(fp_line
+		(start 1.45 -1.4)
+		(end -1.45 -1.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "5f84da75-eca4-44ae-b05e-bed5a3b84e8a")
+	)
+	(fp_line
+		(start 2.05 1)
+		(end 2.55 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8a0cedab-b07a-42d0-887b-0b0cb42444c9")
+	)
+	(fp_line
+		(start 2.6 1)
+		(end 2.6 -0.2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "528f8015-3fa9-48ec-a154-75fd266562cc")
+	)
+	(fp_circle
+		(center -0.85 0)
+		(end -0.35 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "01405bb9-de89-4a3b-856f-192673853c8e")
+	)
+	(fp_circle
+		(center 0.85 0)
+		(end 1.35 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "e8ecc486-d1b1-4df3-98e5-dbf6d5e8f113")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.6 5.4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f61da2c9-be35-459c-ac93-dceaefdeb8d9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.7 1)
+		(size 0.7 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9256dbcf-5ab6-4ca8-a779-d975acff3adb")
+	)
+	(pad "2" smd rect
+		(at 1.7 1)
+		(size 0.7 1.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cee640a0-12da-414c-ae7d-a4adcab5db55")
+	)
+	(pad "3" smd rect
+		(at -2.125 -1)
+		(size 1.1 1.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8006568d-2f3a-4a0c-b2c7-8ca31227a7c5")
+	)
+	(pad "4" smd rect
+		(at 2.125 -1)
+		(size 1.1 1.35)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8f63381a-a6a8-4872-9d44-25742e927013")
+	)
+	(group ""
+		(uuid "6dbd7746-7e19-4709-bfb2-4f5af9d9222e")
+		(members "01405bb9-de89-4a3b-856f-192673853c8e" "0a9dc3f7-f425-4217-8328-2b3c922ccaa9"
+			"528f8015-3fa9-48ec-a154-75fd266562cc" "5f84da75-eca4-44ae-b05e-bed5a3b84e8a"
+			"6d4bea35-3513-4e53-8ad4-898c642ae7fa" "7c5e943c-98e6-4b18-9a87-fc16e81883a4"
+			"8006568d-2f3a-4a0c-b2c7-8ca31227a7c5" "8a0cedab-b07a-42d0-887b-0b0cb42444c9"
+			"8f63381a-a6a8-4872-9d44-25742e927013" "9256dbcf-5ab6-4ca8-a779-d975acff3adb"
+			"9ae794f1-6d0b-4217-bac6-568affd87938" "a9870eff-175a-4236-93b5-9860a11c468f"
+			"b7a17ddf-c651-40f6-b617-59fae7d51a10" "cee640a0-12da-414c-ae7d-a4adcab5db55"
+			"e8ecc486-d1b1-4df3-98e5-dbf6d5e8f113"
+		)
+	)
+	(embedded_fonts no)
+)
