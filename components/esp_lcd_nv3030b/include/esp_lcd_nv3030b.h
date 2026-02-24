@@ -81,6 +81,9 @@ esp_err_t esp_lcd_new_panel_nv3030b(const esp_lcd_panel_io_handle_t io, const es
         .user_ctx = cb_ctx,                                     \
         .lcd_cmd_bits = 32,                                     \
         .lcd_param_bits = 8,                                    \
+        .flags = {                                              \
+            .quad_mode = 1,                                     \
+        },                                                      \
     }
 
 #ifdef __cplusplus

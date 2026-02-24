@@ -75,7 +75,7 @@ esp_err_t lcd_init(void)
 
     const esp_lcd_panel_io_spi_config_t io_cfg = NV3030B_PANEL_IO_QSPI_CONFIG(
                                                                 PIN_NUM_LCD_CS,
-                                                                test_notify_refresh_ready,
+                                                                NULL,
                                                                 NULL);
 
     ESP_RETURN_ON_ERROR(esp_lcd_new_panel_io_spi(LCD_HOST, &io_cfg, &lcd_io), TAG, "initialize LCD panel IO failed");
@@ -109,8 +109,8 @@ lv_display_t *lvgl_init(void)
     const lvgl_port_display_cfg_t disp_cfg = {
         .io_handle = lcd_io,
         .panel_handle = lcd_panel,
-        .buffer_size = 284 * 20,
-        .double_buffer = true,
+        .buffer_size = 284 * 240,
+        .double_buffer = false,
         .hres = LCD_H_RES,
         .vres = LCD_V_RES,
         .monochrome = false,
@@ -121,11 +121,11 @@ lv_display_t *lvgl_init(void)
             .mirror_y = false,
         },
         .flags = {
-            .buff_dma = true,
+            .buff_dma = false,
         },
     };
     lv_display_t *disp = lvgl_port_add_disp(&disp_cfg);
-
+    lvgl_port_flush_ready(disp);
     return disp;
 }
 
@@ -200,26 +200,9 @@ static void test_draw_bitmap(esp_lcd_panel_handle_t panel_handle)
     //vTaskDelay(pdMS_TO_TICKS(3000));
 }
 
-
 void app_main(void)
 {   
-    /*
     ESP_ERROR_CHECK(lcd_init());
-    uint16_t white = 0xFFFF;
-    
-    while (1)
-    {
-            test_draw_bitmap(lcd_panel);
-            vTaskDelay(pdMS_TO_TICKS(1000));
-
-    }
-    */
-    
-    ESP_ERROR_CHECK(lcd_init());
-    vTaskDelay(pdMS_TO_TICKS(100));
-    ESP_ERROR_CHECK(iic_init());
-
     lvgl_init();
     lv_demo_benchmark();
-    
 }

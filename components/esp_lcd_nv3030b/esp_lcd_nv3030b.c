@@ -221,7 +221,7 @@ static const nv3030b_lcd_init_cmd_t vendor_specific_init_default[] = {
     {0xF1, (uint8_t []){0x01, 0x01, 0x02}, 3, 0},
     {0xF6, (uint8_t []){0x09, 0x10, 0x00, 0x00}, 4, 0},
     {0xFD, (uint8_t []){0xfa, 0xfc}, 2, 0},
-    //{0x3A, (uint8_t []){0x55}, 1, 0},
+    //{0x3A, (uint8_t []){0x65}, 1, 0},
     //{0x36, (uint8_t []){0x00}, 1, 0},//mark 8 1000;0 0000
     {0x35, (uint8_t []){0x00}, 1, 0},
     {0x21, (uint8_t []){}, 0, 1},
