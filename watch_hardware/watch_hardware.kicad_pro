@@ -673,9 +673,14 @@
         "filename": "page2.kicad_sch",
         "name": "page2",
         "uuid": "b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
+      },
+      {
+        "filename": "pwr.kicad_sch",
+        "name": "PWR",
+        "uuid": "91b4abbe-39f2-4013-a5dd-baf0602104ec"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U7-8,U13,#FLG3,R16,R21-24,R26-28,BT1,L1-3,#PWR27-29,#PWR31-34,#PWR36-38,#PWR40-41,#PWR45,#PWR47,#PWR59-61,C16-18,C21,C23,C26-29,C39-48,F1,TH1",
     "variants": []
   },
   "sheets": [
@@ -686,6 +691,10 @@
     [
       "b0fe33d6-e90c-47a3-b32a-8a425f5f7c27",
       "page2"
+    ],
+    [
+      "91b4abbe-39f2-4013-a5dd-baf0602104ec",
+      "PWR"
     ]
   ],
   "text_variables": {},
