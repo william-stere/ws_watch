@@ -5767,12 +5767,6 @@
 		(uuid "1f726b3b-1934-4478-a7aa-204895be19ad")
 	)
 	(junction
-		(at 43.18 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "29aab579-0c8c-41c3-a013-be0680ee211d")
-	)
-	(junction
 		(at 156.21 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5795,6 +5789,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3c24ac1b-2fa9-4a2c-a2f6-9c6b7680fa23")
+	)
+	(junction
+		(at 43.18 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3f664613-fc21-485c-bded-05693ba048ca")
 	)
 	(junction
 		(at 19.05 25.4)
@@ -5849,6 +5849,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "565c7173-cbda-469e-8a1b-0ff164752d21")
+	)
+	(junction
+		(at 43.18 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56fb8676-5c5f-4709-9a1d-873642d0284a")
 	)
 	(junction
 		(at 248.92 74.93)
@@ -5983,6 +5989,12 @@
 		(uuid "985fe007-20ba-4134-9ccb-21d24e1f3106")
 	)
 	(junction
+		(at 43.18 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "987ca244-0117-4107-89ed-12b5aec33c63")
+	)
+	(junction
 		(at 29.21 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6035,12 +6047,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b44e60ad-5ae2-4610-b926-57a38fbfe948")
-	)
-	(junction
-		(at 43.18 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b88f3111-24dd-41c2-bd3c-8c67765af1f5")
 	)
 	(junction
 		(at 43.18 78.74)
@@ -6145,12 +6151,6 @@
 		(uuid "ea049287-53ab-4ff1-8214-8ea93ffed688")
 	)
 	(junction
-		(at 43.18 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ead4d189-2eeb-4252-a5d7-01c776ac2acb")
-	)
-	(junction
 		(at 31.75 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6239,6 +6239,16 @@
 			(type default)
 		)
 		(uuid "007a949d-edc5-43b4-8f7f-babb281d432c")
+	)
+	(wire
+		(pts
+			(xy 43.18 100.33) (xy 43.18 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "007b91e9-0adb-4233-88db-757e57bbb1cb")
 	)
 	(wire
 		(pts
@@ -6369,16 +6379,6 @@
 			(type default)
 		)
 		(uuid "0a803a89-afca-4891-8963-a4697da619ed")
-	)
-	(wire
-		(pts
-			(xy 43.18 69.85) (xy 43.18 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0aeddbd7-f1d2-4713-859c-acf3e3e056d9")
 	)
 	(wire
 		(pts
@@ -7039,6 +7039,16 @@
 			(type default)
 		)
 		(uuid "52f02fad-63a2-4da5-b81e-6c4a249bc633")
+	)
+	(wire
+		(pts
+			(xy 43.18 85.09) (xy 43.18 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5312b649-c4e7-4bff-a369-ce051da5ed4d")
 	)
 	(wire
 		(pts
@@ -7912,6 +7922,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 69.85) (xy 43.18 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c5818ec-b5d0-4025-b66b-68797fc2f6de")
+	)
+	(wire
+		(pts
 			(xy 167.64 82.55) (xy 176.53 82.55)
 		)
 		(stroke
@@ -8322,16 +8342,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 100.33) (xy 43.18 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bde0d043-3674-486d-9bcf-e24df3c19550")
-	)
-	(wire
-		(pts
 			(xy 60.96 152.4) (xy 60.96 158.75)
 		)
 		(stroke
@@ -8739,16 +8749,6 @@
 			(type default)
 		)
 		(uuid "e1a6e24d-3702-429e-a9de-3aa10496b611")
-	)
-	(wire
-		(pts
-			(xy 43.18 85.09) (xy 43.18 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1c7af0e-f512-41d6-b81d-460e8d419239")
 	)
 	(wire
 		(pts
@@ -10042,7 +10042,7 @@
 				)
 			)
 		)
-		(property "Value" "15pF"
+		(property "Value" "18pF"
 			(at 135.89 23.368 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10589,86 +10589,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 38.1 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1a0176f5-c2c1-4175-a875-ca3ab2a36a9f")
-		(property "Reference" "SW2"
-			(at 35.052 66.802 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 38.1 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 38.1 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 38.1 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dbe67ec5-5695-49f5-b642-6d457662efd8")
-		)
-		(pin "2"
-			(uuid "8ba54c01-8ec3-4364-b6e5-0f4c1bf24b71")
-		)
-		(instances
-			(project "watch_hardware"
-				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3VA")
 		(at 212.09 99.06 0)
 		(unit 1)
@@ -10780,7 +10700,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 45.4152 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -11175,7 +11095,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 209.2452 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -11783,6 +11703,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 38.1 100.33 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3a52674b-04d4-4fa5-af88-f10ceac2afd2")
+		(property "Reference" "SW4"
+			(at 35.052 97.282 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 38.1 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
+			(at 38.1 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 38.1 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67906915-5e8d-4a34-8b39-a55032b68336")
+		)
+		(pin "2"
+			(uuid "bd1e1508-3aaa-4899-a4df-ee2a43019de9")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 118.11 17.78 90)
 		(unit 1)
@@ -11803,7 +11803,7 @@
 				)
 			)
 		)
-		(property "Value" "15pF"
+		(property "Value" "18pF"
 			(at 117.856 23.622 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12020,86 +12020,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 38.1 85.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4e2f9153-0243-4b65-a411-47b819ac29ba")
-		(property "Reference" "SW3"
-			(at 35.052 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 38.1 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 38.1 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 38.1 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "defd43d1-bcb7-416a-b74a-f4efc1b8b039")
-		)
-		(pin "2"
-			(uuid "bbd2f800-574f-407b-9a6e-4c8d97982da4")
-		)
-		(instances
-			(project "watch_hardware"
-				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 60.96 38.1 0)
 		(unit 1)
@@ -12130,7 +12050,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 61.9252 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -12531,7 +12451,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+		(property "Footprint" "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm"
 			(at 127 17.78 0)
 			(hide yes)
 			(show_name no)
@@ -12955,7 +12875,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
 			(at 38.1 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -13154,86 +13074,6 @@
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
 					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 38.1 100.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8a41e1b4-cd8a-413d-ae93-08826774e15c")
-		(property "Reference" "SW4"
-			(at 35.052 97.282 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 38.1 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 38.1 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 38.1 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3015678a-b6f7-44ab-ba74-6ea38e3fac16")
-		)
-		(pin "2"
-			(uuid "068274af-a2fe-466b-a6bd-2f0022a2f2d6")
-		)
-		(instances
-			(project "watch_hardware"
-				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "SW4")
 					(unit 1)
 				)
 			)
@@ -13746,7 +13586,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 68.2752 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13828,7 +13668,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 271.4752 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -16534,6 +16374,166 @@
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 38.1 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f9ddd19b-faab-483c-8ecf-cb6a7792dfbf")
+		(property "Reference" "SW3"
+			(at 35.052 82.042 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 38.1 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
+			(at 38.1 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 38.1 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2c29efbf-6c0d-4579-a076-f0e8711fcb16")
+		)
+		(pin "2"
+			(uuid "02c4634f-735c-4e62-8fe3-0cc6903d9f2f")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 38.1 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fb0b9485-ee78-4eec-b625-935cb4934fed")
+		(property "Reference" "SW2"
+			(at 35.052 66.802 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 38.1 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
+			(at 38.1 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 38.1 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5653e11f-5587-44a5-bcd6-a751a1922c56")
+		)
+		(pin "2"
+			(uuid "65ae14e8-8c92-476b-a044-322620294ea0")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
