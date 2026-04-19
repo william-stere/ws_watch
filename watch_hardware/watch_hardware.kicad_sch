@@ -1508,6 +1508,184 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:L"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Inductor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -6133,6 +6311,12 @@
 		(uuid "dc84afff-e27d-4b39-aaa9-42b315597843")
 	)
 	(junction
+		(at 53.34 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e5936098-52c5-4e62-8b83-871c4b91d45f")
+	)
+	(junction
 		(at 96.52 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6167,6 +6351,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f461fdae-9421-4790-ba49-263f3439e791")
+	)
+	(junction
+		(at 67.31 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "faa4c70e-1d92-4afb-864c-5b535ea8d41b")
 	)
 	(junction
 		(at 127 12.7)
@@ -6402,6 +6592,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 58.42) (xy 64.77 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ee25ba8-975f-4493-9695-ba69b881c4b6")
+	)
+	(wire
+		(pts
 			(xy 96.52 25.4) (xy 96.52 52.07)
 		)
 		(stroke
@@ -6472,6 +6672,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 49.53) (xy 71.12 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17d25567-2243-4d15-8c92-656936e8f704")
+	)
+	(wire
+		(pts
 			(xy 86.36 72.39) (xy 104.14 72.39)
 		)
 		(stroke
@@ -6532,16 +6742,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 49.53) (xy 104.14 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21556cb1-c06d-490d-8d78-ab7e81f54bb1")
-	)
-	(wire
-		(pts
 			(xy 247.65 138.43) (xy 262.89 138.43)
 		)
 		(stroke
@@ -6559,6 +6759,16 @@
 			(type default)
 		)
 		(uuid "25039297-b419-4310-917f-a0a94442d5be")
+	)
+	(wire
+		(pts
+			(xy 45.72 43.18) (xy 40.64 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25cdee97-7d11-43c5-ba03-9f9a16a9e5d5")
 	)
 	(wire
 		(pts
@@ -7112,16 +7322,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 36.83) (xy 93.98 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "583eac01-2347-419d-8427-a5a65fbda375")
-	)
-	(wire
-		(pts
 			(xy 247.65 135.89) (xy 259.08 135.89)
 		)
 		(stroke
@@ -7149,6 +7349,16 @@
 			(type default)
 		)
 		(uuid "5b8de83c-662a-4260-a9ff-1fedc0133378")
+	)
+	(wire
+		(pts
+			(xy 71.12 58.42) (xy 67.31 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b921868-ba2d-4c49-ad1f-cf878b524a94")
 	)
 	(wire
 		(pts
@@ -7352,6 +7562,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 58.42) (xy 45.72 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "676a79c5-fe09-4a77-bb5f-5e3c77d5b007")
+	)
+	(wire
+		(pts
 			(xy 259.08 50.8) (xy 274.32 50.8)
 		)
 		(stroke
@@ -7552,6 +7772,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 58.42) (xy 53.34 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "785c66bf-d9e2-4723-8dbf-3b3fe4f4db4d")
+	)
+	(wire
+		(pts
 			(xy 19.05 72.39) (xy 19.05 87.63)
 		)
 		(stroke
@@ -7669,6 +7899,16 @@
 			(type default)
 		)
 		(uuid "850c2159-695e-44b4-a4ef-c8939d7c44d1")
+	)
+	(wire
+		(pts
+			(xy 71.12 49.53) (xy 71.12 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8550f5b0-59df-461c-81b9-e8cd3deaeec6")
 	)
 	(wire
 		(pts
@@ -7949,6 +8189,16 @@
 			(type default)
 		)
 		(uuid "9d9aed8f-fe42-43a1-9765-5e9aeee13c0c")
+	)
+	(wire
+		(pts
+			(xy 53.34 58.42) (xy 45.72 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9eac977a-33a2-43fa-a60c-18b73febb009")
 	)
 	(wire
 		(pts
@@ -10032,7 +10282,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "084e9fd5-a2ba-4721-a649-9b2bd6e843b1")
-		(property "Reference" "C10"
+		(property "Reference" "C12"
 			(at 135.89 20.828 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10094,7 +10344,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C10")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -10112,7 +10362,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c5332fb-58aa-417c-bb9f-7a5227dc23db")
-		(property "Reference" "C14"
+		(property "Reference" "C16"
 			(at 261.62 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10176,7 +10426,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C14")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -10600,7 +10850,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a968da1-c970-4220-9c91-d47981236ca6")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR019"
 			(at 212.09 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -10660,7 +10910,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR017")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -10759,7 +11009,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1f9de322-4152-4208-94f9-a72fdf597af0")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR015"
 			(at 177.8 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10820,7 +11070,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR013")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -10838,7 +11088,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "239b042d-af7d-43fd-9864-7ecf67bb8dd7")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR020"
 			(at 219.71 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -10898,7 +11148,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR018")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -10995,7 +11245,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2bc3255a-f8e0-4fb7-a684-6acb007155be")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR018"
 			(at 208.28 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -11055,7 +11305,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR016")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -11073,7 +11323,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2dae8877-ac07-4094-ab23-a916d103061b")
-		(property "Reference" "C11"
+		(property "Reference" "C13"
 			(at 212.09 146.0499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11137,7 +11387,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C11")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -11395,7 +11645,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35af5557-2228-4d5e-8191-9094169943c2")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR022"
 			(at 248.92 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -11455,7 +11705,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -11793,7 +12043,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3e93aae0-30a1-4cea-8b0f-f87df4dbb216")
-		(property "Reference" "C9"
+		(property "Reference" "C11"
 			(at 117.856 21.082 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11855,7 +12105,89 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C9")
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 67.31 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43193e64-b743-4e5f-99e7-6bba9d51e981")
+		(property "Reference" "C10"
+			(at 71.12 60.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1pF"
+			(at 71.12 63.4999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 68.2752 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 67.31 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "42b14df4-5f9a-4e0b-a76f-f9cb91db883b")
+		)
+		(pin "2"
+			(uuid "f2d40ebe-9f89-4fac-840f-7bd4605c043a")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -11952,7 +12284,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49dd375a-1ba0-49ad-b4b3-6b13ee3bc52c")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR026"
 			(at 274.32 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -12013,7 +12345,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR024")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -12030,7 +12362,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4fa089de-1863-4d2f-839c-c3960e3c0a9a")
-		(property "Reference" "C7"
+		(property "Reference" "C8"
 			(at 55.245 38.481 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12092,7 +12424,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C7")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -12110,7 +12442,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50c6496f-7ea9-415f-8480-2881dbd19d66")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR025"
 			(at 262.89 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -12170,7 +12502,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR023")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -12259,6 +12591,88 @@
 	)
 	(symbol
 		(lib_id "Device:C")
+		(at 53.34 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "544f2adf-8cd2-4df6-b0ef-613e06bd680c")
+		(property "Reference" "C6"
+			(at 57.15 60.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.7pF"
+			(at 57.15 63.4999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 54.3052 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 53.34 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "30e9ae87-5a22-4250-85e1-1363ef480d9e")
+		)
+		(pin "2"
+			(uuid "fc574820-64a5-4012-83d8-df5924ed2b6d")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 219.71 147.32 0)
 		(unit 1)
 		(body_style 1)
@@ -12269,7 +12683,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "556c106f-993b-4493-873f-c85de4f0d887")
-		(property "Reference" "C12"
+		(property "Reference" "C14"
 			(at 223.52 146.0499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12333,7 +12747,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C12")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -12341,7 +12755,7 @@
 	)
 	(symbol
 		(lib_id "projects:ANT-SMD-2_L3.2-W1.6")
-		(at 83.82 40.64 0)
+		(at 30.48 46.99 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12352,7 +12766,7 @@
 		(fields_autoplaced yes)
 		(uuid "5c091128-f51d-421f-bd12-9b2108f2629b")
 		(property "Reference" "ANT1"
-			(at 87.63 30.48 0)
+			(at 34.29 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12362,7 +12776,7 @@
 			)
 		)
 		(property "Value" "ANT-SMD-2_L3.2-W1.6"
-			(at 87.63 33.02 0)
+			(at 34.29 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12372,7 +12786,7 @@
 			)
 		)
 		(property "Footprint" "projects:ANT-SMD-2_L3.2-W1.6"
-			(at 83.82 40.64 0)
+			(at 30.48 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12383,7 +12797,7 @@
 			)
 		)
 		(property "Datasheet" "https://item.szlcsc.com/datasheet/KH-3216-A35/516661.html"
-			(at 83.82 40.64 0)
+			(at 30.48 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12394,7 +12808,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.82 40.64 0)
+			(at 30.48 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12414,6 +12828,84 @@
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
 					(reference "ANT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 67.31 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c249767-72d8-49f0-8b35-4c8e48b8e17f")
+		(property "Reference" "#PWR07"
+			(at 67.31 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 67.31 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 67.31 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f9277ce5-fd58-4ef5-9b8c-7322d06bf0d5")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -12698,7 +13190,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "734c1278-f694-4ad2-927a-bd55f0fbd83a")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR024"
 			(at 257.81 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -12758,7 +13250,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR022")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -12934,7 +13426,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "838c9bf4-ff89-4e24-82f5-2167d0ffaa90")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR013"
 			(at 151.13 17.78 0)
 			(hide yes)
 			(show_name no)
@@ -12994,7 +13486,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR011")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -13011,7 +13503,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8903bd39-0aaa-4c09-a436-91c9c4de4543")
-		(property "Reference" "C13"
+		(property "Reference" "C15"
 			(at 258.826 95.504 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13073,7 +13565,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C13")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -13091,7 +13583,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8b958f37-c513-48fb-a8cc-abab43ec6213")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR016"
 			(at 200.66 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -13151,7 +13643,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR014")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -13169,7 +13661,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8e9422a8-7b30-4071-9eec-1bf7a8fa401b")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR021"
 			(at 248.92 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -13229,7 +13721,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR019")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -13411,7 +13903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9678f691-a1dd-4936-a5c8-0be0198a4535")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR027"
 			(at 270.51 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -13471,7 +13963,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR025")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -13489,7 +13981,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9a5b9356-fdbe-4b47-aec7-468756300034")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR017"
 			(at 205.74 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -13549,7 +14041,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR015")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -13566,7 +14058,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9c73806c-9351-49c2-b6e7-e03bf4563a16")
-		(property "Reference" "C8"
+		(property "Reference" "C9"
 			(at 61.595 38.481 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13628,7 +14120,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C8")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -13646,7 +14138,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d0f764d-23e7-4f06-ad09-3cfc0e7c1fff")
-		(property "Reference" "C15"
+		(property "Reference" "C17"
 			(at 274.32 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13710,7 +14202,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C15")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -13806,7 +14298,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3de8a66-ae3b-4ce7-9ca3-0dc3589410dd")
-		(property "Reference" "C6"
+		(property "Reference" "C7"
 			(at 59.69 29.2099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13870,7 +14362,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "C6")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -14048,7 +14540,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ab9d154d-7e9e-423b-ae6c-fc0c284805d6")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR012"
 			(at 125.73 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -14108,7 +14600,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR010")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -14284,7 +14776,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b07333ce-3c17-48c8-af92-f64bd18d571b")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR09"
 			(at 69.85 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -14344,7 +14836,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR07")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -14646,7 +15138,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b301ebd9-07a5-49b2-970e-13b1baebfa07")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR08"
 			(at 67.31 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -14706,7 +15198,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR06")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -14724,7 +15216,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b662dac8-5108-4348-a9ee-6ba78fa3e847")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR011"
 			(at 100.33 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -14785,7 +15277,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR09")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -15190,6 +15682,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 53.34 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c961e2cc-06c8-4dd3-b9d0-a8441eb4be0d")
+		(property "Reference" "#PWR05"
+			(at 53.34 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 53.34 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 53.34 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "746c70b5-1622-44f9-8521-53e0c1d70c2f")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 22.86 57.15 270)
 		(unit 1)
@@ -15279,7 +15849,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d1059063-bd6e-4b7f-bd9a-f35346c990b0")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR06"
 			(at 66.04 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -15340,7 +15910,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR05")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -15509,7 +16079,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d2ef42a9-b4a4-4cfe-9b3f-298487e33fdc")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR028"
 			(at 276.86 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -15569,7 +16139,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR026")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -15586,7 +16156,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "deb85650-386c-429c-8071-c5a11802e22b")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR014"
 			(at 175.26 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -15647,7 +16217,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR012")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -15746,7 +16316,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0ec1e51-0cf8-4d6f-8b8e-dc708e000bf6")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR010"
 			(at 72.39 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -15806,7 +16376,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR08")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -15886,6 +16456,86 @@
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 60.96 58.42 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6430a0b-0827-4a65-8159-81cb3bbf4615")
+		(property "Reference" "L1"
+			(at 60.96 53.34 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1.5nH"
+			(at 60.96 55.88 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
+			(at 60.96 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 60.96 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "22ad4e27-6f1a-490e-9bb6-26297bcdcbfc")
+		)
+		(pin "1"
+			(uuid "99c1783e-cd04-4b94-a435-0ec9712192b0")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
+					(reference "L1")
 					(unit 1)
 				)
 			)
@@ -16087,7 +16737,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8ff30be-a833-40c1-8f52-073e2cd074e8")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR023"
 			(at 251.46 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -16147,7 +16797,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/40739ce3-f590-4a00-bb21-64697b259e66"
-					(reference "#PWR021")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
