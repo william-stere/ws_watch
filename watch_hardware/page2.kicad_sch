@@ -56572,6 +56572,12 @@
 		(uuid "7b8fff71-529d-45d8-8b99-9f0bdb0bacbc")
 	)
 	(junction
+		(at 40.64 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e5f46d5-3bec-449a-9bed-f9a25f1f18ac")
+	)
+	(junction
 		(at 62.23 147.32)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -57431,7 +57437,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 26.67) (xy 40.64 31.75)
+			(xy 40.64 26.67) (xy 40.64 29.21)
 		)
 		(stroke
 			(width 0)
@@ -57931,6 +57937,16 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 29.21) (xy 40.64 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f303b84a-e8ec-4286-97b3-62b4d4abbb9f")
+	)
+	(wire
+		(pts
 			(xy 160.02 44.45) (xy 171.45 44.45)
 		)
 		(stroke
@@ -58321,7 +58337,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 20.6248 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -59651,7 +59667,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 63.1952 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -60527,6 +60543,85 @@
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
 					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 40.64 29.21 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f40bb7c-d1c2-49ac-ac85-0ff299e28926")
+		(property "Reference" "#PWR071"
+			(at 34.29 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 36.83 29.2099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.64 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 40.64 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "32ac780f-d6d4-4553-a649-f68e94155955")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -61538,7 +61633,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical"
 			(at 186.69 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -61939,7 +62034,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 89.2048 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -62575,7 +62670,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 171.1452 78.74 0)
 			(hide yes)
 			(show_name no)
