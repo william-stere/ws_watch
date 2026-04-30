@@ -58226,6 +58226,84 @@
 		(uuid "e2f5bb66-c490-4821-96a1-160f65ea405a")
 	)
 	(symbol
+		(lib_id "power:+2V5")
+		(at 53.34 21.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "01386050-7fca-49a6-848f-6e02bc80e5a1")
+		(property "Reference" "#PWR031"
+			(at 53.34 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+2V0"
+			(at 53.34 16.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+2V5\""
+			(at 53.34 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9ed7d120-ab72-4007-8b96-bb1353925aed")
+		)
+		(instances
+			(project "watch_hardware"
+				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3VA")
 		(at 78.74 73.66 0)
 		(unit 1)
@@ -58570,7 +58648,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "82k"
+		(property "Value" "270k"
 			(at 55.88 26.6699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -58624,84 +58702,6 @@
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
 					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+2V5")
-		(at 53.34 21.59 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "23b94da2-e0ce-49b3-ac7c-626e29cf4259")
-		(property "Reference" "#PWR031"
-			(at 53.34 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+1V0"
-			(at 53.34 16.51 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 21.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 21.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+2V5\""
-			(at 53.34 21.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3d1da822-ec41-4102-8b0d-750636d81ede")
-		)
-		(instances
-			(project "watch_hardware"
-				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -60558,7 +60558,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8f40bb7c-d1c2-49ac-ac85-0ff299e28926")
 		(property "Reference" "#PWR071"
 			(at 34.29 29.21 0)
@@ -60572,7 +60571,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.83 29.2099 90)
+			(at 37.846 29.464 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -60956,7 +60955,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a3ce256e-1280-461a-8205-b2711724c5c8")
 		(property "Reference" "#PWR028"
 			(at 30.48 38.1 0)
@@ -60970,7 +60968,7 @@
 			)
 		)
 		(property "Value" "+2V0"
-			(at 30.48 29.21 0)
+			(at 29.972 29.718 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
