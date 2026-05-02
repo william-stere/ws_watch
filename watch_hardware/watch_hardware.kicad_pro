@@ -130,7 +130,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.09,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.3,
         "min_groove_width": 0.0,
@@ -143,8 +143,8 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.15,
-        "min_track_width": 0.09,
-        "min_via_annular_width": 0.05,
+        "min_track_width": 0.13,
+        "min_via_annular_width": 0.15,
         "min_via_diameter": 0.25,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -195,7 +195,7 @@
       ],
       "track_widths": [
         0.0,
-        0.127,
+        0.131,
         0.1511,
         0.254,
         0.508,
@@ -233,20 +233,12 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.2,
-          "drill": 0.1
-        },
-        {
-          "diameter": 0.3,
+          "diameter": 0.45,
           "drill": 0.15
         },
         {
-          "diameter": 0.4,
-          "drill": 0.15
-        },
-        {
-          "diameter": 0.61,
-          "drill": 0.305
+          "diameter": 0.6,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -529,9 +521,9 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.127,
+        "track_width": 0.131,
         "tuning_profile": "",
-        "via_diameter": 0.3,
+        "via_diameter": 0.45,
         "via_drill": 0.15,
         "wire_width": 6
       }
@@ -548,7 +540,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "D:/project/Esp32Project/PCB_gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "watch_hardware.step",
@@ -723,7 +715,7 @@
         "uuid": "91b4abbe-39f2-4013-a5dd-baf0602104ec"
       }
     ],
-    "used_designators": "U1-12,Y1-2,C1-60,AE1-2,L1-5,#PWR1-80,R1-19,#FLG1-3,ANT1,BT1,D1-10,J1-2,LS1,SDA1,MK1,Q1,SCL1,SW1-4,TH1",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
