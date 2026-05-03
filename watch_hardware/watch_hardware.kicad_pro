@@ -538,7 +538,7 @@
   "pcbnew": {
     "last_paths": {
       "gencad": "",
-      "idf": "",
+      "idf": "watch_hardware.emn",
       "netlist": "",
       "plot": "D:/project/Esp32Project/PCB_gerber/",
       "pos_files": "",
