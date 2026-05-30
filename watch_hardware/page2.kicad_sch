@@ -74808,7 +74808,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "01386050-7fca-49a6-848f-6e02bc80e5a1")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR032"
 			(at 53.34 25.4 0)
 			(hide yes)
 			(show_name no)
@@ -74868,7 +74868,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR034")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -74885,7 +74885,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "06e0ea3b-c61f-478a-974f-3a51a17bd3ba")
-		(property "Reference" "C35"
+		(property "Reference" "C33"
 			(at 217.932 160.528 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -74947,7 +74947,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C35")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -75047,7 +75047,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d24d413-90b8-4ff4-8289-f1a045a27172")
-		(property "Reference" "C18"
+		(property "Reference" "C16"
 			(at 17.78 144.7801 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -75111,7 +75111,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C18")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -75373,7 +75373,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2035e6a0-b8f6-4290-81cb-e7fc1a782441")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR036"
 			(at 82.55 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -75433,7 +75433,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR038")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -75451,7 +75451,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24810d90-4939-4020-9ddb-859ff209366d")
-		(property "Reference" "C27"
+		(property "Reference" "C25"
 			(at 74.93 129.5401 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -75515,7 +75515,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C27")
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -75533,7 +75533,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24bce4e9-d929-4ba9-811e-2bc49e50dc61")
-		(property "Reference" "#PWR046"
+		(property "Reference" "#PWR044"
 			(at 170.18 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -75593,7 +75593,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR046")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -75610,7 +75610,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "273543ac-5987-42b4-80c4-970d7820365b")
-		(property "Reference" "C29"
+		(property "Reference" "C27"
 			(at 164.846 108.966 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -75672,7 +75672,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C29")
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -75898,7 +75898,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e6486ea-76ae-4346-91a7-b4e1a5c85953")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR045"
 			(at 181.61 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -75958,7 +75958,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR047")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -75976,7 +75976,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e09cebd-658e-41ab-b727-fc398848d6bd")
-		(property "Reference" "C37"
+		(property "Reference" "C34"
 			(at 237.49 115.5699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76040,7 +76040,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C37")
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -76057,7 +76057,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4335408e-6abc-4be2-9d9f-027943796f93")
-		(property "Reference" "C20"
+		(property "Reference" "C18"
 			(at 41.656 37.084 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76119,7 +76119,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C20")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -76217,7 +76217,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "450809f0-a7b1-443c-a34c-679b923e9447")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR034"
 			(at 62.23 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -76278,7 +76278,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR036")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -76295,7 +76295,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "489d66dd-0685-4cca-963c-1487724583c2")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR052"
 			(at 275.59 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -76355,7 +76355,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR054")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -76372,7 +76372,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "51f63969-fd44-47af-b8c7-d35062053be0")
-		(property "Reference" "C45"
+		(property "Reference" "C42"
 			(at 272.034 156.972 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76436,7 +76436,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C45")
+					(reference "C42")
 					(unit 1)
 				)
 			)
@@ -76535,7 +76535,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "55c8194e-a83b-48e1-879d-08e5fbdf1c75")
-		(property "Reference" "C26"
+		(property "Reference" "C24"
 			(at 77.47 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76599,7 +76599,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C26")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -76616,7 +76616,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "56bc613a-6cae-4e54-8cb4-0e52437862a7")
-		(property "Reference" "C38"
+		(property "Reference" "C35"
 			(at 239.268 103.632 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76680,7 +76680,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C38")
+					(reference "C35")
 					(unit 1)
 				)
 			)
@@ -76698,7 +76698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c6a9160-f014-4696-ab7a-8eb3516750fa")
-		(property "Reference" "C24"
+		(property "Reference" "C22"
 			(at 66.04 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76762,7 +76762,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C24")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -76779,7 +76779,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5d19b1cf-2a27-4258-8634-a16d6a80d2cb")
-		(property "Reference" "C39"
+		(property "Reference" "C36"
 			(at 237.744 157.734 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76843,7 +76843,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C39")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -76860,7 +76860,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "62888c99-e8ab-4097-9d01-e95d98ce12f8")
-		(property "Reference" "C44"
+		(property "Reference" "C41"
 			(at 271.526 149.86 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76924,7 +76924,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C44")
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -77218,7 +77218,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6fd8404f-c981-491d-8732-ef1663090a32")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR048"
 			(at 212.09 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -77278,7 +77278,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR050")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -77296,7 +77296,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7259df72-680a-424a-82b8-5ff315aa993a")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR038"
 			(at 90.17 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -77356,7 +77356,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR040")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -77537,7 +77537,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b333e34-5821-49df-81b0-e89de0f043be")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR047"
 			(at 207.01 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -77597,7 +77597,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR049")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -77615,7 +77615,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c21084e-d285-402e-9343-89d72e708494")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR037"
 			(at 78.74 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -77675,7 +77675,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR039")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -77693,7 +77693,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85bccc55-3235-4f5e-bc94-dd8f1a4f583c")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR035"
 			(at 73.66 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -77753,7 +77753,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR037")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -77771,7 +77771,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8bdbd1d3-3398-41fd-8810-56cc8a773990")
-		(property "Reference" "C19"
+		(property "Reference" "C17"
 			(at 30.48 144.7801 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -77835,7 +77835,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C19")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -77852,7 +77852,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8f40bb7c-d1c2-49ac-ac85-0ff299e28926")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR030"
 			(at 34.29 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -77913,7 +77913,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR032")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -77931,7 +77931,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "938e39cc-3349-4fa1-ba7c-52d64570fe8b")
-		(property "Reference" "C22"
+		(property "Reference" "C20"
 			(at 54.61 144.7801 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -77995,7 +77995,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C22")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -78013,7 +78013,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "95448d76-0332-49ad-b3b6-bebc17a7088f")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR029"
 			(at 30.48 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -78073,7 +78073,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR031")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -78091,7 +78091,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a017367f-e1fd-4ead-9f2c-d2b14d8f89ef")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR040"
 			(at 110.49 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -78151,7 +78151,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR042")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -78330,7 +78330,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3ce256e-1280-461a-8205-b2711724c5c8")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR028"
 			(at 30.48 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -78390,7 +78390,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR030")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -78407,7 +78407,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a48a51d4-8a46-46e1-af0d-3c61f5201aea")
-		(property "Reference" "C21"
+		(property "Reference" "C19"
 			(at 44.577 22.479 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -78469,7 +78469,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C21")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -78566,7 +78566,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a734032d-e75c-47c7-b38c-6f4203a22f3f")
-		(property "Reference" "C34"
+		(property "Reference" "C32"
 			(at 219.71 110.49 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -78628,7 +78628,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C34")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -78726,7 +78726,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa0fb5c9-16a9-434e-95f6-760ec48def27")
-		(property "Reference" "C40"
+		(property "Reference" "C37"
 			(at 239.522 129.032 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -78790,7 +78790,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C40")
+					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -78987,7 +78987,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b4c2efbb-a627-471a-b9b5-e19ea58e965a")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR046"
 			(at 189.23 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -79047,7 +79047,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR048")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -79065,7 +79065,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bb8e2a51-d402-4fcd-bf26-1d2df6b3af73")
-		(property "Reference" "C43"
+		(property "Reference" "C40"
 			(at 256.54 141.986 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -79129,7 +79129,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C43")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -79147,7 +79147,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bdbc98a3-2cb8-400f-86da-7e9a26d16e25")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR033"
 			(at 62.23 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -79207,7 +79207,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR035")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -79224,7 +79224,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bf806638-9432-434f-a07e-83f6ba20f57f")
-		(property "Reference" "C42"
+		(property "Reference" "C39"
 			(at 258.064 156.972 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -79288,7 +79288,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C42")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -79306,7 +79306,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0496410-86ab-4b71-8358-3b5a36e91702")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR049"
 			(at 220.98 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -79367,7 +79367,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR051")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -79467,7 +79467,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c199987b-6c37-4d6d-9f13-99be86d07e42")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR031"
 			(at 46.99 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -79527,7 +79527,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR033")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -79627,7 +79627,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3a2e122-5713-4655-93b1-34aac76b30b8")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR039"
 			(at 102.87 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -79687,7 +79687,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR041")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -79946,7 +79946,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cfbe40fc-ce13-48e1-bbd8-543aabf7820c")
-		(property "Reference" "C31"
+		(property "Reference" "C29"
 			(at 185.42 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80010,7 +80010,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C31")
+					(reference "C29")
 					(unit 1)
 				)
 			)
@@ -80028,7 +80028,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d1ec6671-1312-4abe-975a-89008f8bd85a")
-		(property "Reference" "C28"
+		(property "Reference" "C26"
 			(at 86.36 129.5401 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80092,7 +80092,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C28")
+					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -80109,7 +80109,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d2e826cf-348d-4b1f-9481-425c87e5bc3e")
-		(property "Reference" "C23"
+		(property "Reference" "C21"
 			(at 58.42 54.356 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80171,7 +80171,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C23")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -80189,7 +80189,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d84f22c9-15d6-4585-ae27-7fc4d5e7ae35")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR043"
 			(at 160.02 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -80249,7 +80249,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR045")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -80353,7 +80353,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc3c7d36-4199-4f78-af84-0199e4fe1d51")
-		(property "Reference" "C41"
+		(property "Reference" "C38"
 			(at 256.54 132.0799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80417,7 +80417,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C41")
+					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -80435,7 +80435,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e17825dc-ffdb-4dd7-9c70-45554f699536")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR041"
 			(at 116.84 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -80495,7 +80495,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR043")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -80513,7 +80513,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1ba1979-510d-487c-a632-648def98362c")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR042"
 			(at 149.86 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -80573,7 +80573,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR044")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -80591,7 +80591,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2fe0448-51ef-47c0-91d3-91b9534d8c63")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR050"
 			(at 250.19 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -80651,7 +80651,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR052")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -80750,7 +80750,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e926bda0-520d-4b74-8684-ccbcf41ff5c2")
-		(property "Reference" "C32"
+		(property "Reference" "C30"
 			(at 198.12 132.0799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80814,7 +80814,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C32")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -80912,7 +80912,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f3ab1ce1-45e0-4eed-8b6f-164cea5acafd")
-		(property "Reference" "C33"
+		(property "Reference" "C31"
 			(at 194.056 145.796 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80974,7 +80974,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C33")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -80991,7 +80991,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f4063f5b-191c-48ed-a4b8-3a4796de59a8")
-		(property "Reference" "C25"
+		(property "Reference" "C23"
 			(at 66.548 140.462 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -81053,7 +81053,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C25")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -81071,7 +81071,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f59aae47-185b-451b-9e06-9b3b05923dbb")
-		(property "Reference" "C30"
+		(property "Reference" "C28"
 			(at 173.99 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -81135,7 +81135,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "C30")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -81153,7 +81153,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7e53235-b09b-4966-9f72-4fbfd5de9cdd")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR051"
 			(at 260.35 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -81213,7 +81213,7 @@
 		(instances
 			(project "watch_hardware"
 				(path "/b0fe33d6-e90c-47a3-b32a-8a425f5f7c27"
-					(reference "#PWR053")
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)

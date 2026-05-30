@@ -32,7 +32,7 @@
 #define PIN_NUM_LCD_DATA3    (GPIO_NUM_14)
 #define PIN_NUM_LCD_RST      (GPIO_NUM_NC)
 #define PIN_NUM_LCD_BL       (GPIO_NUM_NC)
-#define LCD_PCLK_FREQ_HZ     (10 * 1000 * 1000)
+#define LCD_PCLK_FREQ_HZ     (1 * 1000 * 1000)
 
 #define TOUCH_INT            (GPIO_NUM_NC)
 
@@ -201,8 +201,105 @@ static void test_draw_bitmap(esp_lcd_panel_handle_t panel_handle)
 }
 
 void app_main(void)
-{   
+{   /*
     ESP_ERROR_CHECK(lcd_init());
     lvgl_init();
-    lv_demo_benchmark();
+    lv_demo_benchmark();*/
+        // ========== 1. 初始化 I2C 总线 ==========
+    // ========== 1. 初始化 I2C 总线 ==========
+    // ========== 1. 初始化 I2C 总线 ==========
+    i2c_master_bus_handle_t bus_handle = NULL;
+    i2c_master_bus_config_t bus_config = {
+        .i2c_port = 0,
+        .scl_io_num = GPIO_NUM_6,
+        .sda_io_num = GPIO_NUM_5,
+        .clk_source = I2C_CLK_SRC_DEFAULT,
+        .glitch_ignore_cnt = 7,
+        .flags.enable_internal_pullup = true,
+    };
+    ESP_ERROR_CHECK(i2c_new_master_bus(&bus_config, &bus_handle));
+
+    // ========== 2. 添加 TPS652170 设备 ==========
+    i2c_master_dev_handle_t dev_handle = NULL;
+    i2c_device_config_t dev_config = {
+        .dev_addr_length = I2C_ADDR_BIT_LEN_7,
+        .device_address = 0x24,
+        .scl_speed_hz = 100000,
+    };
+    ESP_ERROR_CHECK(i2c_master_bus_add_device(bus_handle, &dev_config, &dev_handle));
+
+    // ========== 3. 等待设备响应（不断读 CHIPID 直到成功） ==========
+    ESP_LOGI("app_main", "Waiting for TPS652170...");
+    uint8_t chip_id = 0;
+    while (1) {
+        uint8_t reg = 0x00;
+        esp_err_t ret = i2c_master_transmit_receive(dev_handle, &reg, 1, &chip_id, 1, pdMS_TO_TICKS(100));
+        if (ret == ESP_OK) {
+            ESP_LOGI("app_main", "TPS652170 found, CHIPID=0x%02X", chip_id);
+            break;
+        }
+        ESP_LOGD("app_main", "No ACK, retrying...");
+        vTaskDelay(pdMS_TO_TICKS(200));
+    }
+
+    // ========== 4. 常量定义 ==========
+    const uint8_t REG_PASSWORD = 0x0B;
+    const uint8_t REG_DEFDCDC1 = 0x0E;
+    const uint8_t REG_DEFDCDC2 = 0x0F;
+    const uint8_t REG_DEFDCDC3 = 0x10;
+    const uint8_t REG_DEFLDO2 = 0x13;
+    const uint8_t REG_DEFLS1 = 0x14;
+    const uint8_t REG_DEFLS2 = 0x15;
+    const uint8_t REG_ENABLE = 0x16;
+    const uint8_t PASSWORD_VAL = 0x7D;
+
+    // ========== 5. 辅助宏 ==========
+    #define TPS_WRITE(reg, val) do { \
+        uint8_t wbuf[2] = {reg, val}; \
+        ESP_ERROR_CHECK(i2c_master_transmit(dev_handle, wbuf, 2, pdMS_TO_TICKS(100))); \
+    } while(0)
+
+    #define TPS_READ(reg, out) do { \
+        uint8_t wbuf = reg; \
+        ESP_ERROR_CHECK(i2c_master_transmit_receive(dev_handle, &wbuf, 1, out, 1, pdMS_TO_TICKS(100))); \
+    } while(0)
+
+    #define TPS_WRITE_LEVEL1(reg, val) do { \
+        uint8_t pass[2] = {REG_PASSWORD, PASSWORD_VAL ^ (reg)}; \
+        ESP_ERROR_CHECK(i2c_master_transmit(dev_handle, pass, 2, pdMS_TO_TICKS(100))); \
+        TPS_WRITE(reg, val); \
+    } while(0)
+
+    #define TPS_WRITE_LEVEL2(reg, val) do { \
+        for (int _i = 0; _i < 2; _i++) { \
+            uint8_t pass[2] = {REG_PASSWORD, PASSWORD_VAL ^ (reg)}; \
+            ESP_ERROR_CHECK(i2c_master_transmit(dev_handle, pass, 2, pdMS_TO_TICKS(100))); \
+            TPS_WRITE(reg, val); \
+        } \
+    } while(0)
+
+    // ========== 6. 配置输出电压 ==========
+    TPS_WRITE_LEVEL2(REG_DEFDCDC1, 0x38);   // DCDC1 = 3.3V
+    TPS_WRITE_LEVEL2(REG_DEFDCDC2, 0x38);   // DCDC2 = 3.3V
+    TPS_WRITE_LEVEL2(REG_DEFDCDC3, 0x38);   // DCDC3 = 3.3V
+    TPS_WRITE_LEVEL2(REG_DEFLDO2, 0x38);    // LDO2 = 3.3V
+    TPS_WRITE_LEVEL2(REG_DEFLS1, 0x00);     // LS1 = 负载开关模式
+    TPS_WRITE_LEVEL2(REG_DEFLS2, 0x29);     // LS2 = LDO 模式 2V
+
+    // ========== 7. 仅使能 DCDC2 ==========
+    uint8_t enable_val = (1 << 3);   // DC2_EN
+    TPS_WRITE_LEVEL1(REG_ENABLE, enable_val);
+
+    // ========== 8. 再次读取验证 ==========
+    TPS_READ(0x00, &chip_id);
+    uint8_t enable_read = 0;
+    TPS_READ(REG_ENABLE, &enable_read);
+    ESP_LOGI("app_main", "CHIPID=0x%02X, ENABLE=0x%02X", chip_id, enable_read);
+    ESP_LOGI("app_main", "PMIC configured: only DCDC2 enabled (3.3V).");
+
+    // 清理宏
+    #undef TPS_WRITE
+    #undef TPS_READ
+    #undef TPS_WRITE_LEVEL1
+    #undef TPS_WRITE_LEVEL2
 }
